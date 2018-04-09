@@ -1,5 +1,5 @@
 # bootstrap 4 config
-baseurl = "https://ethannote.gitlab.io/diary/"
+baseurl = "https://ethannote.github.io/diary/"
 languageCode = "en-us"
 title = "Diary"
 theme = "hugo-theme-bootstrap4-blog"
