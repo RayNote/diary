@@ -14,7 +14,7 @@ echo 'Update site'
 git pull
 cd ..
 mv public old_public   #remove everything but .git
-cp -r research_note/public .
+cp -r diary/public .
 cp -r old_public/.git public
 cd public 
 git add .
