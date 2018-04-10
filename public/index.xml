@@ -6,9 +6,39 @@
     <description>Recent content on Diary</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Tue, 10 Apr 2018 15:52:24 +0800</lastBuildDate>
     
 	<atom:link href="https://ethannote.github.io/diary/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>18-04-10</title>
+      <link>https://ethannote.github.io/diary/post/18-04-10/</link>
+      <pubDate>Tue, 10 Apr 2018 15:52:24 +0800</pubDate>
+      
+      <guid>https://ethannote.github.io/diary/post/18-04-10/</guid>
+      <description>重新设计 传输 建立 TCP 客户端、服务器，数据内容为 Python dict, 通过 pickle 将 dict 序列化并发送，服务器端反序列化得到dict对象
+import socket import pickle class Reporter: def __init__(self, ip, port): self.sock=socket.socket() self.sock.connect((ip, port)) def report(self, data: dict): if type(data)!=dict: raise TypeError(&#39;require dict&#39;) self.sock.send(pickle.dumps(data))  接收 使用标准库自带的 ThreadingTCPServer, 并实现 BaseRequestHandler 的子类，即可完成服务器端数据接收。重写父类的 handle 方法。
+data = self.request.recv(1024) # load dict object from bytes obj = pickle.loads(data) if type(obj) == dict: # set time obj[&#39;time&#39;] = datetime.datetime.now() # check auth info if &#39;auth&#39; in obj.</description>
+    </item>
+    
+    <item>
+      <title>18-04-09</title>
+      <link>https://ethannote.github.io/diary/post/18-04-09/</link>
+      <pubDate>Mon, 09 Apr 2018 10:19:35 +0800</pubDate>
+      
+      <guid>https://ethannote.github.io/diary/post/18-04-09/</guid>
+      <description>MongoDB 服务器搭建 安装 sudo apt install mongodb  同时安装 mongodb, mongodb-client, mongodb-server
+启动 sudo service mongodb start  配置 sudo vim /etc/mongodb.conf  其中默认ip为 127.0.0.1, 默认端口为 27017
+允许外部访问 bind_ip = 0.0.0.0 auth = true  合理的设计中数据库不应该直接暴露到外网，应该设计一个中间件。
+讲道理设置安全认证纯属心虚，有人想着攻击的时候怕是产品都卖出去一波了，然后让客户加钱解决安全问题
+用户设置 设置一个管理员和一个通用软件账户，管理员角色为 root, 软件账户角色为指定数据库的 readWrite
+命令行客户端
+mongo &amp;lt;ip&amp;gt;/&amp;lt;db_name&amp;gt; -u &amp;lt;username&amp;gt; -p  或者
+mongo &amp;lt;ip&amp;gt; use &amp;lt;db_name&amp;gt; db.auth(&amp;lt;username&amp;gt;, &amp;lt;password&amp;gt;)  Python 连接  安装数据库驱动
+pip install pymongo  连接并读写数据库
+  from pymongo import MongoClient client=MongoClient(&#39;mongodb://&amp;lt;username&amp;gt;:&amp;lt;password&amp;gt;&#39;) print(client.</description>
+    </item>
     
   </channel>
 </rss>

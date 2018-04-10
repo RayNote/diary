@@ -12,7 +12,7 @@ paginate = 5
   author = "EthanNote"
 
   # Description/subtitle for homepage (can be Markdown)
-  description = "Every well designed system needs event log"
+  description = "Let's remember how busy you were."
 
   # Format dates with Go's time formatting
   date_format = "Mon Jan 02, 2006"
