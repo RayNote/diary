@@ -12,7 +12,7 @@
 
 
 
-<meta property="og:updated_time" content="2018-04-10T15:52:24&#43;08:00"/>
+<meta property="og:updated_time" content="2018-04-12T23:28:52&#43;08:00"/>
 
 
 
@@ -40,7 +40,7 @@
     "@type": "Person",
     "name": "EthanNote"
   },
-  "dateModified": "2018-04-10T15:52:24&#43;08:00",
+  "dateModified": "2018-04-12T23:28:52&#43;08:00",
   "keywords": "",
   "description": "Let&#39;s remember how busy you were."
 }
@@ -103,6 +103,40 @@
 
 <article class="blog-post">
   <header>
+    <h2 class="blog-post-title"><a href="https://ethannote.github.io/diary/post/18-04-12/">Empty</a></h2>
+    <p class="blog-post-meta"><time datetime="2018-04-12T23:28:52&#43;08:00">Thu Apr 12, 2018</time> by EthanNote</p>
+  </header>
+  昨天睡前看到了名为 Layoutit 的在线 Bootstrap 设计工具，能够很方便地制作项目所需的UI。今天上午用它制作了一个页面，并结合IoT代码实现了消息推送显示。 目前仍需要制作一个雷达定位坐标图，晚上看到了jsDraw2DX图形库，看着效果还不错。
+http://jsdraw2dx.jsfiction.com/
+不得不承认调试 css 各种参数很耗时间，一坐就是一下午。 - padding-bottom: 100% 可以让div锁定为正方形 - 垂直分割线可以用div 实现 &lt;div style=&quot;width:0.5px;border:0.5px solid lightgray;float:right;height:150%;&quot;&gt;&lt;/div&gt; - 若要模仿控制台，垂直滚动条自动移动到最下部，可以对最后一个元素进行 scrollIntoView - 浏览器缓存会导致 css 不能正常更新，可以删除浏览记录
+  <a href='https://ethannote.github.io/diary/post/18-04-12/'>Read more →</a>
+</article> 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="https://ethannote.github.io/diary/post/18-04-11/">Empty</a></h2>
+    <p class="blog-post-meta"><time datetime="2018-04-11T23:08:09&#43;08:00">Wed Apr 11, 2018</time> by EthanNote</p>
+  </header>
+  网易的实习面试放弃了。无论去或是不去，对我来说都不轻松。西安到杭州，坐火车要24小时，高铁7小时，无论哪种方式都要前一天去，路上或是宾馆过一夜。 本来就没有足够时间准备面试问题，这一路上再这么一折腾，怕是满脑子都只想着赶紧结束回来吧。
+只是，机会难得，在Ray的鼓励下，我买了车票。
+晚上我把面试的计划告诉了李老师，发完微信消息我十分期待得到一个否定的回答，为什么是期待否定的呢。我的期待只过了10分钟就顺利实现了，我不用再多想， 难过当然是有的，但更多的是释然，我不用再操心这么一件事情了，或许是比打一场无准备之仗更好的结果吧。
+晚上我把 Raycast2D 的 bug 修复了，产生bug的原因是扫描线未遇到障碍时，未把该方向标记为无效方向，当扫描点位于围墙外时，该点有着极大的覆盖范围， 进行绘图时，由于无效值远大于有效值，导致图像几乎只有黑白两色。新的绘图中，若某点任一方向的扫描距离达到最远无效距离，则该点不列入 scatter 列表。
+晚饭后喝了一罐啤酒，缓解情绪。青岛9度没感觉，下次记得买干啤。
+  <a href='https://ethannote.github.io/diary/post/18-04-11/'>Read more →</a>
+</article> 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
     <h2 class="blog-post-title"><a href="https://ethannote.github.io/diary/post/18-04-10/">18-04-10</a></h2>
     <p class="blog-post-meta"><time datetime="2018-04-10T15:52:24&#43;08:00">Tue Apr 10, 2018</time> by EthanNote</p>
   </header>
@@ -143,7 +177,7 @@ pip install pymongo  连接并读写数据库
 <article class="blog-post">
   <header>
     <h2 class="blog-post-title"><a href="https://ethannote.github.io/diary/post/">Posts</a></h2>
-    <p class="blog-post-meta"><time datetime="2018-04-10T15:52:24&#43;08:00">Tue Apr 10, 2018</time> by EthanNote</p>
+    <p class="blog-post-meta"><time datetime="2018-04-12T23:28:52&#43;08:00">Thu Apr 12, 2018</time> by EthanNote</p>
   </header>
   
   <a href='https://ethannote.github.io/diary/post/'>Read more →</a>
@@ -171,6 +205,10 @@ pip install pymongo  连接并读写数据库
     <h4>Recent Posts</h4>
     <ol class="list-unstyled">
 
+
+<li><a href="/diary/post/18-04-12/">Empty</a></li>
+
+<li><a href="/diary/post/18-04-11/">Empty</a></li>
 
 <li><a href="/diary/post/18-04-10/">18-04-10</a></li>
 
