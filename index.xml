@@ -6,10 +6,19 @@
     <description>Recent content on Diary</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 12 Apr 2018 23:28:52 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 13 Apr 2018 23:18:51 +0800</lastBuildDate>
     
 	<atom:link href="https://ethannote.github.io/diary/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Empty</title>
+      <link>https://ethannote.github.io/diary/post/18-04-13/</link>
+      <pubDate>Fri, 13 Apr 2018 23:18:51 +0800</pubDate>
+      
+      <guid>https://ethannote.github.io/diary/post/18-04-13/</guid>
+      <description>设备认证 不同设备的数据存储在不同的 collections 的中，设备需提供 name, password，才能将数据存储到对应 name 的 collection 中</description>
+    </item>
     
     <item>
       <title>18-04-12</title>
