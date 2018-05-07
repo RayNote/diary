@@ -12,7 +12,7 @@
 
 
 
-<meta property="og:updated_time" content="2018-04-10T15:52:24&#43;08:00"/>
+<meta property="og:updated_time" content="2018-04-11T23:08:09&#43;08:00"/>
 
 
 
@@ -40,7 +40,7 @@
     "@type": "Person",
     "name": "EthanNote"
   },
-  "dateModified": "2018-04-10T15:52:24&#43;08:00",
+  "dateModified": "2018-04-11T23:08:09&#43;08:00",
   "keywords": "",
   "description": "Let&#39;s remember how busy you were."
 }
@@ -103,6 +103,24 @@
 
 <article class="blog-post">
   <header>
+    <h2 class="blog-post-title"><a href="https://ethannote.github.io/diary/post/18-04-11/">18-04-11</a></h2>
+    <p class="blog-post-meta"><time datetime="2018-04-11T23:08:09&#43;08:00">Wed Apr 11, 2018</time> by EthanNote</p>
+  </header>
+  网易的实习面试放弃了。无论去或是不去，对我来说都不轻松。西安到杭州，坐火车要24小时，高铁7小时，无论哪种方式都要前一天去，路上或是宾馆过一夜。 本来就没有足够时间准备面试问题，这一路上再这么一折腾，怕是满脑子都只想着赶紧结束回来吧。
+只是，机会难得，在Ray的鼓励下，我买了车票。
+晚上我把面试的计划告诉了李老师，发完微信消息我十分期待得到一个否定的回答，为什么是期待否定的呢。我的期待只过了10分钟就顺利实现了，我不用再多想， 难过当然是有的，但更多的是释然，我不用再操心这么一件事情了，或许是比打一场无准备之仗更好的结果吧。
+晚上我把 Raycast2D 的 bug 修复了，产生bug的原因是扫描线未遇到障碍时，未把该方向标记为无效方向，当扫描点位于围墙外时，该点有着极大的覆盖范围， 进行绘图时，由于无效值远大于有效值，导致图像几乎只有黑白两色。新的绘图中，若某点任一方向的扫描距离达到最远无效距离，则该点不列入 scatter 列表。
+晚饭后喝了一罐啤酒，缓解情绪。青岛9度没感觉，下次记得买干啤。
+  <a href='https://ethannote.github.io/diary/post/18-04-11/'>Read more →</a>
+</article> 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
     <h2 class="blog-post-title"><a href="https://ethannote.github.io/diary/post/18-04-10/">18-04-10</a></h2>
     <p class="blog-post-meta"><time datetime="2018-04-10T15:52:24&#43;08:00">Tue Apr 10, 2018</time> by EthanNote</p>
   </header>
@@ -142,8 +160,23 @@ pip install pymongo  连接并读写数据库
 
 <article class="blog-post">
   <header>
+    <h2 class="blog-post-title"><a href="https://ethannote.github.io/diary/post/18-04-28/">18-04-28</a></h2>
+    <p class="blog-post-meta"><time datetime="2018-04-09T10:15:09&#43;08:00">Mon Apr 09, 2018</time> by EthanNote</p>
+  </header>
+  雷达设备已经连接新的系统，使用 HTML svg 显示目标移动轨迹，本周初已经实现。
+不得不承认 SVG 矢量图很好用。一开始的解决方案是JS + canvas, 若情况复杂则考虑各种图形库。而使用矢量图将绘图极大简化，并且不必考虑画布缓冲区大小的问题。 SVG 矢量图本身是独立于HTML的，支持若干种基本几何图形，使用 XML 描述，可以直接嵌入到HTML中。服务器以JSON格式向浏览器被动发送跟踪路径数据， 包括路径坐标序列和路径颜色。浏览器在接收到设备消息之后，使用AJAX请求该路径数据，对于每个请求服务器都会进行数据库查询，取出定位记录，建立滤波模型， 生成路径等一系列计算。
+  <a href='https://ethannote.github.io/diary/post/18-04-28/'>Read more →</a>
+</article> 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
     <h2 class="blog-post-title"><a href="https://ethannote.github.io/diary/post/">Posts</a></h2>
-    <p class="blog-post-meta"><time datetime="2018-04-16T16:45:37&#43;08:00">Mon Apr 16, 2018</time> by EthanNote</p>
+    <p class="blog-post-meta"><time datetime="2018-05-06T23:25:21&#43;08:00">Sun May 06, 2018</time> by EthanNote</p>
   </header>
   
   <a href='https://ethannote.github.io/diary/post/'>Read more →</a>
@@ -181,15 +214,15 @@ pip install pymongo  连接并读写数据库
     <ol class="list-unstyled">
 
 
-<li><a href="/diary/post/18-04-16/">老婆</a></li>
+<li><a href="/diary/post/18-05-06/">18-05-06</a></li>
 
-<li><a href="/diary/post/18-04-14/">Empty</a></li>
+<li><a href="/diary/post/18-04-16/">18-04-16 老婆亲临指导标题</a></li>
 
-<li><a href="/diary/post/18-04-13/">Empty</a></li>
+<li><a href="/diary/post/18-04-14/">18-04-14</a></li>
+
+<li><a href="/diary/post/18-04-13/">18-04-13</a></li>
 
 <li><a href="/diary/post/18-04-12/">18-04-12</a></li>
-
-<li><a href="/diary/post/18-04-11/">18-04-11</a></li>
 
     </ol>
   </section>

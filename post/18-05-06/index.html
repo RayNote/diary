@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta property="og:title" content="18-05-06" />
+<meta property="og:description" content="荒废了好多天日记，罪过罪过。
+为蒋师兄准备的 Hackathon Solutions / python 花了挺多心思，也速成了不少技能。 准备了 Flask、Django 的基础教程，认识了 SQLAlchemy 这么个 ORM，也了解了 Flask-SQLArchemy 插件。Django 自带 ORM 以前体验过，相当好用。此外王博何博需要准备 Java web 相关的示例，我花了几个小时重温 maven，虽然内心深处对 Java web 充满草泥马，但还是小结如下：
+交互式选择项目模板
+mvn archetype:generate  项目使用 SSH 框架可以查找 struts 2 相关的模板
+打 war 包
+mvn package  war 包拷贝到 Tomcat app 目录下，服务器启动时自动解压部署。
+闲的时候打了刺激战场，对枪的时候模拟器就卡，必死，战术卡顿，呵。
+昨天晚上睡公司了，晚上洗完澡心情大悦，就背着被子来公司了。夜里给雷达系统增加了个历史记录显示模块，类似GitHub的 contribution 年历。
+今天实现了时间切片功能，仅处理并生成从当前时间开始后续的坐标跟踪。
+晚上成功读出了新雷达的测量数据，中午的时候安排姜老板把新拿来的设备连上读数，折腾一下午没弄成，先是不知道UDP上位机端口，后来发现是人家没给新文档。 后来他使劲写得不到预期的数据，觉得文档的格式说明有问题。晚上我介入过来，告诉他按我的思路来写代码，成了。虽然让我亲自上阵可能会更快， 但锻炼机会还是要给的，不然我一走人，项目就很难做下去了。而且各种事情都我来做怕是要累死。
+明天公司要开会，我起来后得把被子收一下。
+在公司穿拖鞋溜达真爽。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ethannote.github.io/diary/post/18-05-06/" />
+
+
+
+<meta property="article:published_time" content="2018-05-06T23:25:21&#43;08:00"/>
+
+<meta property="article:modified_time" content="2018-05-06T23:25:21&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="18-05-06"/>
+<meta name="twitter:description" content="荒废了好多天日记，罪过罪过。
+为蒋师兄准备的 Hackathon Solutions / python 花了挺多心思，也速成了不少技能。 准备了 Flask、Django 的基础教程，认识了 SQLAlchemy 这么个 ORM，也了解了 Flask-SQLArchemy 插件。Django 自带 ORM 以前体验过，相当好用。此外王博何博需要准备 Java web 相关的示例，我花了几个小时重温 maven，虽然内心深处对 Java web 充满草泥马，但还是小结如下：
+交互式选择项目模板
+mvn archetype:generate  项目使用 SSH 框架可以查找 struts 2 相关的模板
+打 war 包
+mvn package  war 包拷贝到 Tomcat app 目录下，服务器启动时自动解压部署。
+闲的时候打了刺激战场，对枪的时候模拟器就卡，必死，战术卡顿，呵。
+昨天晚上睡公司了，晚上洗完澡心情大悦，就背着被子来公司了。夜里给雷达系统增加了个历史记录显示模块，类似GitHub的 contribution 年历。
+今天实现了时间切片功能，仅处理并生成从当前时间开始后续的坐标跟踪。
+晚上成功读出了新雷达的测量数据，中午的时候安排姜老板把新拿来的设备连上读数，折腾一下午没弄成，先是不知道UDP上位机端口，后来发现是人家没给新文档。 后来他使劲写得不到预期的数据，觉得文档的格式说明有问题。晚上我介入过来，告诉他按我的思路来写代码，成了。虽然让我亲自上阵可能会更快， 但锻炼机会还是要给的，不然我一走人，项目就很难做下去了。而且各种事情都我来做怕是要累死。
+明天公司要开会，我起来后得把被子收一下。
+在公司穿拖鞋溜达真爽。"/>
+<meta name="generator" content="Hugo 0.37.1" />
+
+
+    
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "18-05-06",
+  "url": "https://ethannote.github.io/diary/post/18-05-06/",
+  "wordCount": "54",
+  "datePublished": "2018-05-06T23:25:21&#43;08:00",
+  "dateModified": "2018-05-06T23:25:21&#43;08:00",
+  "author": {
+    "@type": "Person",
+    "name": "EthanNote"
+  }
+}
+</script>
+
+
+
+    <link rel="canonical" href="https://ethannote.github.io/diary/post/18-05-06/">
+
+    <title>18-05-06 | Diary</title>
+
+    <!-- combined, minified CSS -->
+    <link href="https://ethannote.github.io/diary/css/style.css" rel="stylesheet" integrity="sha384-CoMzlF7G4xk3ftqRr7leobnWP85AuISUJljMFjtTG/UHyP/&#43;bBwWAvBlXkB4VQQk" crossorigin="anonymous">
+
+    
+
+    
+
+    
+
+    
+
+  </head>
+
+  <body>
+
+    
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="nav blog-nav">
+          <a class="nav-link " href="https://ethannote.github.io/diary/">Home</a>
+        </nav>
+      </div>
+    </div>
+    
+
+    
+    <header class="blog-header">
+      <div class="container">
+        <h1 class="blog-title"><a href="https://ethannote.github.io/diary/" rel="home">Diary</a></h1>
+        <p class="lead blog-description">Let&rsquo;s remember how busy you were.</p>
+      </div>
+    </header>
+    
+
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 blog-main">
+
+          
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="https://ethannote.github.io/diary/post/18-05-06/">18-05-06</a></h2>
+    <p class="blog-post-meta"><time datetime="2018-05-06T23:25:21&#43;08:00">Sun May 06, 2018</time> by EthanNote</p>
+  </header>
+  <p>荒废了好多天日记，罪过罪过。</p>
+
+<p>为蒋师兄准备的 Hackathon Solutions / python  花了挺多心思，也速成了不少技能。 准备了 Flask、Django 的基础教程，认识了 SQLAlchemy 这么个
+ORM，也了解了 Flask-SQLArchemy 插件。Django 自带 ORM 以前体验过，相当好用。此外王博何博需要准备 Java web 相关的示例，我花了几个小时重温
+maven，虽然内心深处对 Java web 充满草泥马，但还是小结如下：</p>
+
+<p>交互式选择项目模板</p>
+
+<pre><code>mvn archetype:generate
+</code></pre>
+
+<p>项目使用 SSH 框架可以查找 struts 2 相关的模板</p>
+
+<p>打 war 包</p>
+
+<pre><code>mvn package 
+</code></pre>
+
+<p>war 包拷贝到 Tomcat app 目录下，服务器启动时自动解压部署。</p>
+
+<p>闲的时候打了刺激战场，对枪的时候模拟器就卡，必死，战术卡顿，呵。</p>
+
+<p>昨天晚上睡公司了，晚上洗完澡心情大悦，就背着被子来公司了。夜里给雷达系统增加了个历史记录显示模块，类似GitHub的 contribution 年历。</p>
+
+<p>今天实现了时间切片功能，仅处理并生成从当前时间开始后续的坐标跟踪。</p>
+
+<p>晚上成功读出了新雷达的测量数据，中午的时候安排姜老板把新拿来的设备连上读数，折腾一下午没弄成，先是不知道UDP上位机端口，后来发现是人家没给新文档。
+后来他使劲写得不到预期的数据，觉得文档的格式说明有问题。晚上我介入过来，告诉他按我的思路来写代码，成了。虽然让我亲自上阵可能会更快，
+但锻炼机会还是要给的，不然我一走人，项目就很难做下去了。而且各种事情都我来做怕是要累死。</p>
+
+<p>明天公司要开会，我起来后得把被子收一下。</p>
+
+<p>在公司穿拖鞋溜达真爽。</p>
+
+
+  
+
+  
+  <hr>
+  <footer>
+
+  
+    <section>
+    <h4>Share</h4>
+    <nav class="nav sharing-icons">
+      <a class="nav-item" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fethannote.github.io%2fdiary%2fpost%2f18-05-06%2f" title="Share on Facebook"><span class="fa fa-facebook fa-2x" aria-hidden="true"></span></a>
+      <a class="nav-item" href="https://plus.google.com/share?url=https%3a%2f%2fethannote.github.io%2fdiary%2fpost%2f18-05-06%2f" title="Share on Google+"><span class="fa fa-google-plus fa-2x" aria-hidden="true"></span></a>
+      <a class="nav-item" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fethannote.github.io%2fdiary%2fpost%2f18-05-06%2f" title="Share on LinkedIn"><span class="fa fa-linkedin fa-2x" aria-hidden="true"></span></a>
+      <a class="nav-item" href="https://twitter.com/home?status=https%3a%2f%2fethannote.github.io%2fdiary%2fpost%2f18-05-06%2f" title="Tweet this"><span class="fa fa-twitter fa-2x"></span></a>
+    </nav>
+  </section>
+
+  
+
+  
+  </footer>
+  
+
+</article> 
+
+
+
+        </div> <!-- /.blog-main -->
+
+        <aside class="col-sm-3 ml-auto blog-sidebar">
+  
+  <section class="sidebar-module sidebar-module-inset">
+    <h4>About</h4>
+    <p>A simple Hugo theme based on the <a href="http://v4-alpha.getbootstrap.com/examples/blog/">Bootstrap v4 blog example</a>.</p>
+  </section>
+  
+
+  
+        <section class="sidebar-module">
+    <h4>Recent Posts</h4>
+    <ol class="list-unstyled">
+
+
+<li><a href="/diary/post/18-05-06/">18-05-06</a></li>
+
+<li><a href="/diary/post/18-04-16/">18-04-16 老婆亲临指导标题</a></li>
+
+<li><a href="/diary/post/18-04-14/">18-04-14</a></li>
+
+<li><a href="/diary/post/18-04-13/">18-04-13</a></li>
+
+<li><a href="/diary/post/18-04-12/">18-04-12</a></li>
+
+    </ol>
+  </section>
+
+  
+
+  
+</aside>
+
+
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+    
+
+    
+    <footer class="blog-footer">
+      <p>
+      
+      Blog template created by <a href="https://twitter.com/mdo">@mdo</a>, ported to Hugo by <a href='https://twitter.com/mralanorth'>@mralanorth</a>.
+      
+      </p>
+      <p>
+      <a href="#">Back to top</a>
+      </p>
+    </footer>
+    
+
+  </body>
+
+</html>
