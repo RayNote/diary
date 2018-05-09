@@ -12,7 +12,7 @@
 
 
 
-<meta property="og:updated_time" content="2018-05-06T23:25:21&#43;08:00"/>
+<meta property="og:updated_time" content="2018-05-09T11:03:47&#43;08:00"/>
 
 
 
@@ -40,7 +40,7 @@
     "@type": "Person",
     "name": "EthanNote"
   },
-  "dateModified": "2018-05-06T23:25:21&#43;08:00",
+  "dateModified": "2018-05-09T11:03:47&#43;08:00",
   "keywords": "",
   "description": "Let&#39;s remember how busy you were."
 }
@@ -95,6 +95,25 @@
 
           
 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="https://ethannote.github.io/diary/post/18-05-09/">18 05 09</a></h2>
+    <p class="blog-post-meta"><time datetime="2018-05-09T11:03:47&#43;08:00">Wed May 09, 2018</time> by EthanNote</p>
+  </header>
+  起来得很晚，9点多醒了，10点多起来。
+觉得把 pygame 用在数据可视化、产品GUI上是个不错的想法。PyQt 已经是不错的GUI库了，而 pygame 在用少量的代码灵活实现显示效果方面具有优势。
+python 库 pgzero 是个好东西。基于 pygame , setup 一个具有基本功能的游戏十分简单，当然功能也有所限制。总体感觉跟flask风格很像，可以用几行代码实现demo,接下来就考虑如何 design 了。pgzero 的 zero 思想在于把所有注意力集中在游戏逻辑上，完全屏蔽游戏循环，消息队列等底层逻辑。
+然而封装与扩展本身就是矛盾 的，game zero 意味着必须要实现扩展，比如我想要实现一个 thSTG zero, 即只需要实现弹幕关卡设计而无需关心底层问题，那么 pgzero 的封装就必须解开，加入弹幕射击所必须的模块后再封装。凌晨3点实现了demo。
+好在 pgzero 的源代码不难理解，import pgzero 然后仿照 class PGZeroGame 实现自己的游戏底层逻辑封装。因为它建立在 pygame 之上，且模块之间有较好的弱耦合性，所以可以混合使用 pgzero 和自己实现的基于 pygame 的类库。我比较看好它提供的 Actor 类，用来实现弹幕 STG 中各种 2D 元素基本足够。唯一的问题可能在于精灵资源管理，例如需要处理一下大量子弹实例所带来的创建与销毁问题。
+明天出差，真TM想宅着哪都不去，回来的票还是我自己买的。
+  <a href='https://ethannote.github.io/diary/post/18-05-09/'>Read more →</a>
+</article> 
 
 
 
@@ -177,27 +196,6 @@ mvn package  war 包拷贝到 Tomcat app 目录下，服务器启动时自动解
 
 
 
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="https://ethannote.github.io/diary/post/18-04-12/">18-04-12</a></h2>
-    <p class="blog-post-meta"><time datetime="2018-04-12T23:28:52&#43;08:00">Thu Apr 12, 2018</time> by EthanNote</p>
-  </header>
-  昨天睡前看到了名为 Layoutit 的在线 Bootstrap 设计工具，能够很方便地制作项目所需的UI。今天上午用它制作了一个页面，并结合IoT代码实现了消息推送显示。 目前仍需要制作一个雷达定位坐标图，晚上看到了jsDraw2DX图形库，看着效果还不错。
-http://jsdraw2dx.jsfiction.com/
-不得不承认调试 css 各种参数很耗时间，一坐就是一下午。
- padding-bottom: 100% 可以让div锁定为正方形
- 垂直分割线可以用div 实现 &lt;div style=&quot;width:0.5px;border:0.5px solid lightgray;float:right;height:150%;&quot;&gt;&lt;/div&gt;
- 若要模仿控制台，垂直滚动条自动移动到最下部，可以对最后一个元素进行 scrollIntoView
- 浏览器缓存会导致 css 不能正常更新，可以删除浏览记录
-  
-  <a href='https://ethannote.github.io/diary/post/18-04-12/'>Read more →</a>
-</article> 
-
-
-
-
-
 <nav class="blog-pagination">
   
   
@@ -226,6 +224,8 @@ http://jsdraw2dx.jsfiction.com/
     <ol class="list-unstyled">
 
 
+<li><a href="/diary/post/18-05-09/">18 05 09</a></li>
+
 <li><a href="/diary/post/18-05-06/">18-05-06</a></li>
 
 <li><a href="/diary/post/18-04-16/">18-04-16 老婆亲临指导标题</a></li>
@@ -233,8 +233,6 @@ http://jsdraw2dx.jsfiction.com/
 <li><a href="/diary/post/18-04-14/">18-04-14</a></li>
 
 <li><a href="/diary/post/18-04-13/">18-04-13</a></li>
-
-<li><a href="/diary/post/18-04-12/">18-04-12</a></li>
 
     </ol>
   </section>

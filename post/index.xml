@@ -6,10 +6,24 @@
     <description>Recent content in Posts on Diary</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 06 May 2018 23:25:21 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 09 May 2018 11:03:47 +0800</lastBuildDate>
     
 	<atom:link href="https://ethannote.github.io/diary/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>18 05 09</title>
+      <link>https://ethannote.github.io/diary/post/18-05-09/</link>
+      <pubDate>Wed, 09 May 2018 11:03:47 +0800</pubDate>
+      
+      <guid>https://ethannote.github.io/diary/post/18-05-09/</guid>
+      <description>起来得很晚，9点多醒了，10点多起来。
+觉得把 pygame 用在数据可视化、产品GUI上是个不错的想法。PyQt 已经是不错的GUI库了，而 pygame 在用少量的代码灵活实现显示效果方面具有优势。
+python 库 pgzero 是个好东西。基于 pygame , setup 一个具有基本功能的游戏十分简单，当然功能也有所限制。总体感觉跟flask风格很像，可以用几行代码实现demo,接下来就考虑如何 design 了。pgzero 的 zero 思想在于把所有注意力集中在游戏逻辑上，完全屏蔽游戏循环，消息队列等底层逻辑。
+然而封装与扩展本身就是矛盾 的，game zero 意味着必须要实现扩展，比如我想要实现一个 thSTG zero, 即只需要实现弹幕关卡设计而无需关心底层问题，那么 pgzero 的封装就必须解开，加入弹幕射击所必须的模块后再封装。凌晨3点实现了demo。
+好在 pgzero 的源代码不难理解，import pgzero 然后仿照 class PGZeroGame 实现自己的游戏底层逻辑封装。因为它建立在 pygame 之上，且模块之间有较好的弱耦合性，所以可以混合使用 pgzero 和自己实现的基于 pygame 的类库。我比较看好它提供的 Actor 类，用来实现弹幕 STG 中各种 2D 元素基本足够。唯一的问题可能在于精灵资源管理，例如需要处理一下大量子弹实例所带来的创建与销毁问题。
+明天出差，真TM想宅着哪都不去，回来的票还是我自己买的。</description>
+    </item>
     
     <item>
       <title>18-05-06</title>

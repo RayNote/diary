@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta property="og:title" content="18 05 09" />
+<meta property="og:description" content="起来得很晚，9点多醒了，10点多起来。
+觉得把 pygame 用在数据可视化、产品GUI上是个不错的想法。PyQt 已经是不错的GUI库了，而 pygame 在用少量的代码灵活实现显示效果方面具有优势。
+python 库 pgzero 是个好东西。基于 pygame , setup 一个具有基本功能的游戏十分简单，当然功能也有所限制。总体感觉跟flask风格很像，可以用几行代码实现demo,接下来就考虑如何 design 了。pgzero 的 zero 思想在于把所有注意力集中在游戏逻辑上，完全屏蔽游戏循环，消息队列等底层逻辑。
+然而封装与扩展本身就是矛盾 的，game zero 意味着必须要实现扩展，比如我想要实现一个 thSTG zero, 即只需要实现弹幕关卡设计而无需关心底层问题，那么 pgzero 的封装就必须解开，加入弹幕射击所必须的模块后再封装。凌晨3点实现了demo。
+好在 pgzero 的源代码不难理解，import pgzero 然后仿照 class PGZeroGame 实现自己的游戏底层逻辑封装。因为它建立在 pygame 之上，且模块之间有较好的弱耦合性，所以可以混合使用 pgzero 和自己实现的基于 pygame 的类库。我比较看好它提供的 Actor 类，用来实现弹幕 STG 中各种 2D 元素基本足够。唯一的问题可能在于精灵资源管理，例如需要处理一下大量子弹实例所带来的创建与销毁问题。
+明天出差，真TM想宅着哪都不去，回来的票还是我自己买的。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ethannote.github.io/diary/post/18-05-09/" />
+
+
+
+<meta property="article:published_time" content="2018-05-09T11:03:47&#43;08:00"/>
+
+<meta property="article:modified_time" content="2018-05-09T11:03:47&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="18 05 09"/>
+<meta name="twitter:description" content="起来得很晚，9点多醒了，10点多起来。
+觉得把 pygame 用在数据可视化、产品GUI上是个不错的想法。PyQt 已经是不错的GUI库了，而 pygame 在用少量的代码灵活实现显示效果方面具有优势。
+python 库 pgzero 是个好东西。基于 pygame , setup 一个具有基本功能的游戏十分简单，当然功能也有所限制。总体感觉跟flask风格很像，可以用几行代码实现demo,接下来就考虑如何 design 了。pgzero 的 zero 思想在于把所有注意力集中在游戏逻辑上，完全屏蔽游戏循环，消息队列等底层逻辑。
+然而封装与扩展本身就是矛盾 的，game zero 意味着必须要实现扩展，比如我想要实现一个 thSTG zero, 即只需要实现弹幕关卡设计而无需关心底层问题，那么 pgzero 的封装就必须解开，加入弹幕射击所必须的模块后再封装。凌晨3点实现了demo。
+好在 pgzero 的源代码不难理解，import pgzero 然后仿照 class PGZeroGame 实现自己的游戏底层逻辑封装。因为它建立在 pygame 之上，且模块之间有较好的弱耦合性，所以可以混合使用 pgzero 和自己实现的基于 pygame 的类库。我比较看好它提供的 Actor 类，用来实现弹幕 STG 中各种 2D 元素基本足够。唯一的问题可能在于精灵资源管理，例如需要处理一下大量子弹实例所带来的创建与销毁问题。
+明天出差，真TM想宅着哪都不去，回来的票还是我自己买的。"/>
+<meta name="generator" content="Hugo 0.37.1" />
+
+
+    
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "18 05 09",
+  "url": "https://ethannote.github.io/diary/post/18-05-09/",
+  "wordCount": "50",
+  "datePublished": "2018-05-09T11:03:47&#43;08:00",
+  "dateModified": "2018-05-09T11:03:47&#43;08:00",
+  "author": {
+    "@type": "Person",
+    "name": "EthanNote"
+  }
+}
+</script>
+
+
+
+    <link rel="canonical" href="https://ethannote.github.io/diary/post/18-05-09/">
+
+    <title>18 05 09 | Diary</title>
+
+    <!-- combined, minified CSS -->
+    <link href="https://ethannote.github.io/diary/css/style.css" rel="stylesheet" integrity="sha384-CoMzlF7G4xk3ftqRr7leobnWP85AuISUJljMFjtTG/UHyP/&#43;bBwWAvBlXkB4VQQk" crossorigin="anonymous">
+
+    
+
+    
+
+    
+
+    
+
+  </head>
+
+  <body>
+
+    
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="nav blog-nav">
+          <a class="nav-link " href="https://ethannote.github.io/diary/">Home</a>
+        </nav>
+      </div>
+    </div>
+    
+
+    
+    <header class="blog-header">
+      <div class="container">
+        <h1 class="blog-title"><a href="https://ethannote.github.io/diary/" rel="home">Diary</a></h1>
+        <p class="lead blog-description">Let&rsquo;s remember how busy you were.</p>
+      </div>
+    </header>
+    
+
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 blog-main">
+
+          
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="https://ethannote.github.io/diary/post/18-05-09/">18 05 09</a></h2>
+    <p class="blog-post-meta"><time datetime="2018-05-09T11:03:47&#43;08:00">Wed May 09, 2018</time> by EthanNote</p>
+  </header>
+  <p>起来得很晚，9点多醒了，10点多起来。</p>
+
+<p>觉得把 pygame 用在数据可视化、产品GUI上是个不错的想法。PyQt 已经是不错的GUI库了，而 pygame 在用少量的代码灵活实现显示效果方面具有优势。</p>
+
+<p>python 库 pgzero 是个好东西。基于 pygame , setup 一个具有基本功能的游戏十分简单，当然功能也有所限制。总体感觉跟flask风格很像，可以用几行代码实现demo,接下来就考虑如何 design 了。pgzero 的 zero 思想在于把所有注意力集中在游戏逻辑上，完全屏蔽游戏循环，消息队列等底层逻辑。</p>
+
+<p>然而封装与扩展本身就是矛盾 的，game zero 意味着必须要实现扩展，比如我想要实现一个 thSTG zero, 即只需要实现弹幕关卡设计而无需关心底层问题，那么 pgzero 的封装就必须解开，加入弹幕射击所必须的模块后再封装。凌晨3点实现了demo。</p>
+
+<p>好在 pgzero 的源代码不难理解，import pgzero 然后仿照 class PGZeroGame 实现自己的游戏底层逻辑封装。因为它建立在 pygame 之上，且模块之间有较好的弱耦合性，所以可以混合使用 pgzero 和自己实现的基于 pygame 的类库。我比较看好它提供的 Actor 类，用来实现弹幕 STG 中各种 2D 元素基本足够。唯一的问题可能在于精灵资源管理，例如需要处理一下大量子弹实例所带来的创建与销毁问题。</p>
+
+<p>明天出差，真TM想宅着哪都不去，回来的票还是我自己买的。</p>
+
+
+  
+
+  
+  <hr>
+  <footer>
+
+  
+    <section>
+    <h4>Share</h4>
+    <nav class="nav sharing-icons">
+      <a class="nav-item" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fethannote.github.io%2fdiary%2fpost%2f18-05-09%2f" title="Share on Facebook"><span class="fa fa-facebook fa-2x" aria-hidden="true"></span></a>
+      <a class="nav-item" href="https://plus.google.com/share?url=https%3a%2f%2fethannote.github.io%2fdiary%2fpost%2f18-05-09%2f" title="Share on Google+"><span class="fa fa-google-plus fa-2x" aria-hidden="true"></span></a>
+      <a class="nav-item" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fethannote.github.io%2fdiary%2fpost%2f18-05-09%2f" title="Share on LinkedIn"><span class="fa fa-linkedin fa-2x" aria-hidden="true"></span></a>
+      <a class="nav-item" href="https://twitter.com/home?status=https%3a%2f%2fethannote.github.io%2fdiary%2fpost%2f18-05-09%2f" title="Tweet this"><span class="fa fa-twitter fa-2x"></span></a>
+    </nav>
+  </section>
+
+  
+
+  
+  </footer>
+  
+
+</article> 
+
+
+
+        </div> <!-- /.blog-main -->
+
+        <aside class="col-sm-3 ml-auto blog-sidebar">
+  
+  <section class="sidebar-module sidebar-module-inset">
+    <h4>About</h4>
+    <p>A simple Hugo theme based on the <a href="http://v4-alpha.getbootstrap.com/examples/blog/">Bootstrap v4 blog example</a>.</p>
+  </section>
+  
+
+  
+        <section class="sidebar-module">
+    <h4>Recent Posts</h4>
+    <ol class="list-unstyled">
+
+
+<li><a href="/diary/post/18-05-09/">18 05 09</a></li>
+
+<li><a href="/diary/post/18-05-06/">18-05-06</a></li>
+
+<li><a href="/diary/post/18-04-16/">18-04-16 老婆亲临指导标题</a></li>
+
+<li><a href="/diary/post/18-04-14/">18-04-14</a></li>
+
+<li><a href="/diary/post/18-04-13/">18-04-13</a></li>
+
+    </ol>
+  </section>
+
+  
+
+  
+</aside>
+
+
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+    
+
+    
+    <footer class="blog-footer">
+      <p>
+      
+      Blog template created by <a href="https://twitter.com/mdo">@mdo</a>, ported to Hugo by <a href='https://twitter.com/mralanorth'>@mralanorth</a>.
+      
+      </p>
+      <p>
+      <a href="#">Back to top</a>
+      </p>
+    </footer>
+    
+
+  </body>
+
+</html>
