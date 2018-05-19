@@ -3,11 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://ethannote.github.io/diary/new_cat/test/</loc>
-    <lastmod>2018-05-15T08:54:31+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://ethannote.github.io/diary/post/18-05-11/</loc>
     <lastmod>2018-05-11T22:15:59+08:00</lastmod>
   </url>
@@ -69,13 +64,7 @@
   
   <url>
     <loc>https://ethannote.github.io/diary/</loc>
-    <lastmod>2018-05-15T08:54:31+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ethannote.github.io/diary/new_cat/</loc>
-    <lastmod>2018-05-15T08:54:31+08:00</lastmod>
+    <lastmod>2018-05-11T22:15:59+08:00</lastmod>
     <priority>0</priority>
   </url>
   
