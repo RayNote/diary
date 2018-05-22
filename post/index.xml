@@ -6,10 +6,63 @@
     <description>Recent content in Posts on Diary</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 11 May 2018 22:15:59 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 22 May 2018 22:37:23 +0800</lastBuildDate>
     
 	<atom:link href="https://ethannote.github.io/diary/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>18 05 22</title>
+      <link>https://ethannote.github.io/diary/post/18-05-22/</link>
+      <pubDate>Tue, 22 May 2018 22:37:23 +0800</pubDate>
+      
+      <guid>https://ethannote.github.io/diary/post/18-05-22/</guid>
+      <description>上午继续研究 Python GUI 开发的一些方案，PyQt 是比较成熟的 GUI 库，并且对 OpenGL 支持很好。目前使用的 OpenGL 库 ModernGL 所支持的后端是包括 PyQt 的。
+中午回老校区拿了新设备，还是个裸板子。
+然后花了一下午时间解决 OpenGL 渲染文字的功能，尤其是渲染汉字。由于 ModernGL支持由 Numpy 生成矩阵字节写入 OpenGL 缓冲区，那么使用 Numpy 进行图像操作的 OpenCV 就不得不考虑一下了。我知道 OpenCV 包含渲染文本的 API 即 cv2.putText。然而无法显示中文。不得已又回到以前用过的 FreeType, 这个库对文字显示的处理必须得用“讲究”形容，花了几个小时看API文档，终于弄明白了字符图像的边距模型和间距模型。最终实现了将字符串渲染到 Numpy 数组。中文乱码问题可通过更换字体ttf文件解决，网上下载到了Arial+微软雅黑混合字体，简直神器。</description>
+    </item>
+    
+    <item>
+      <title>18-05-21</title>
+      <link>https://ethannote.github.io/diary/post/18-05-21/</link>
+      <pubDate>Tue, 22 May 2018 22:37:15 +0800</pubDate>
+      
+      <guid>https://ethannote.github.io/diary/post/18-05-21/</guid>
+      <description>8点左右火车到了西安，从五路口坐地铁到科技路站。第一次站这么拥挤的地铁，挤着车门站的。
+路上在思考无源雷达能不能定位无人机，想当年科索沃战争老式的无人机雷达侦测到了隐形的 F117 并且给捅下来了。
+整个一天都困得不行，看了看代码，看看B站，在沙发上趟一会儿，晚上下载黑客帝国重温。</description>
+    </item>
+    
+    <item>
+      <title>18-05-20</title>
+      <link>https://ethannote.github.io/diary/post/18-05-20/</link>
+      <pubDate>Sun, 20 May 2018 19:21:53 +0800</pubDate>
+      
+      <guid>https://ethannote.github.io/diary/post/18-05-20/</guid>
+      <description>中午收拾好东西出门，再去一次万达，去吃海底捞。12点半的时候比较饿，找到一家秦记肉夹馍，顺便关注了外卖。
+公交只须几站路，到了之后先略微逛了一会儿，然后到海底捞门口排队，一边喝免费的酸梅汤，吃着小零食，一边下五子棋。明显感觉到自己不如以前了。老婆迎来好几回，很开心。
+海底捞服务极其周到，而且享受到了学生优惠。只不过老婆在门外零食吃的有点多，很快吃不下了。
+没忘记诉老室友们，今天是舍庆节，一个个表示冲泡面，叫外卖庆祝一下。我还是不撒狗粮了吧。
+傍晚坐公交回学校，在实验室休息一会儿。
+离别的伤心又一次涌起，天越来越阴冷，老婆给我一件暖和的褂子穿，很暖和。还给我她过年带来没吃完的半袋花生。在宿舍楼下，我准备好骑车去火车站，抱着难过一阵，然后请她给种草莓。去东广场的路以前没走过，走到一半还是不自信地开了地图看一眼。用力骑了20多分钟就到了。
+100号座位并没有靠窗，这趟车靠窗的位置个位数貌似是9348。聊了一会儿就玩儿起了微信小程序五子棋，老婆挺厉害的。等她睡了我又玩起了残局，打发时间，直到困得受不了。</description>
+    </item>
+    
+    <item>
+      <title>18 05 19</title>
+      <link>https://ethannote.github.io/diary/post/18-05-19/</link>
+      <pubDate>Sat, 19 May 2018 13:15:38 +0800</pubDate>
+      
+      <guid>https://ethannote.github.io/diary/post/18-05-19/</guid>
+      <description>16号晚上坐火车到石家庄，去看老婆。因为失算，后半夜冻成狗，眼前一个温度计，凌晨的温度降到20度还低一点，身上只穿短袖。一想到回来的时候可能还要再冻一次，就后悔没带厚衣服。上车前下载了《我家大师兄脑子有坑》漫画，以前弃的坑，从动画化后就很想补上。
+17号上午老婆有节课要上，约好10点后下课见。下车后我连地图都不用看，直接骑车去了住处。老婆告诉我419有个一夜情的梗，我完全不懂。
+下午我还是困了，睡了一会儿，起来后一起打刺激战场，沉迷游戏忘记吃饭，晚饭又叫了烤鸭外卖。晚上一起看痒局长直播，成功为局长粉丝+1。
+18号上午继续吃鸡，然后到学校退了新买的裙子。下午有一节课，一直上到4点。
+晚上一起看了电影，《寂静之地》，脑婆被吓得不行。
+晚上因为骑单车的事情脑婆很生气，显然不止是单纯的不让出校园导致的，这么一件事情勾起了很多苦恼的经历。我拉着她的手走在路上消气，在欧韵公园终于释放出心中的不愉快大哭一场。女生之间的相处问题真的太难解决了。
+今天早上8点半开组会，老早就赶到学校了，一开一上午，中午吃过饭接着开。下午从东门坐车去万达，逛街看衣服，然后愉快地吃自助烧烤。进门的时候约好一醉方休，不过实际上是老婆喝一罐果啤，我喝了三罐啤酒，把三种牌子的啤酒都体验一番。结果两人都没醉。最后老婆问我要不要干一罐，给录个视频。于是乎我又拿了一罐黑啤。勉强分几口气喝完，肚子撑得慌，老婆告诉我快门没按好，只拍到最后把空罐子使劲一拍。
+下雨了，打车回去，玩玩吃鸡，看看直播。</description>
+    </item>
     
     <item>
       <title>18 05 11</title>
