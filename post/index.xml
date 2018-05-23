@@ -6,10 +6,22 @@
     <description>Recent content in Posts on Diary</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 22 May 2018 22:37:23 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 24 May 2018 02:40:48 +0800</lastBuildDate>
     
 	<atom:link href="https://ethannote.github.io/diary/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>18-05-23</title>
+      <link>https://ethannote.github.io/diary/post/18-05-23/</link>
+      <pubDate>Thu, 24 May 2018 02:40:48 +0800</pubDate>
+      
+      <guid>https://ethannote.github.io/diary/post/18-05-23/</guid>
+      <description>发现 Freetype 的 Set_Char_Size 坑挺多，几经尝试改成了另一个API，Set_Pixel_Size,修复了文字边框相关的一些bug。
+新设备经过一番折腾给测出来了少量数据，回数率和精度都远低于早期版本。
+下午实现了 Freetype 生成的 Numpy array 渲染到 OpenGL。然后开始实现一个设备调试工具，针对单台雷达设备，显示定位目标和一段时间内的统计数据。命令行版本交给阿上去开发。
+老板问用户界面功能，老子就不写界面，纯命令行，爱用不用</description>
+    </item>
     
     <item>
       <title>18-05-22</title>
