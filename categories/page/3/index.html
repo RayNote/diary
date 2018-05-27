@@ -12,7 +12,7 @@
 
 
 
-<meta property="og:updated_time" content="2018-04-14T23:22:22&#43;08:00"/>
+<meta property="og:updated_time" content="2018-04-16T16:45:37&#43;08:00"/>
 
 
 
@@ -40,7 +40,7 @@
     "@type": "Person",
     "name": "EthanNote"
   },
-  "dateModified": "2018-04-14T23:22:22&#43;08:00",
+  "dateModified": "2018-04-16T16:45:37&#43;08:00",
   "keywords": "",
   "description": "Let&#39;s remember how busy you were."
 }
@@ -95,6 +95,28 @@
 
           
 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="https://ethannote.github.io/diary/post/18-04-16/">18-04-16 老婆亲临指导标题</a></h2>
+    <p class="blog-post-meta"><time datetime="2018-04-16T16:45:37&#43;08:00">Mon Apr 16, 2018</time> by EthanNote</p>
+  </header>
+  参加完腾讯实习招聘第二轮面试，心情挺复杂的，比起关心面试结果，我更在意今后的职业道路。必须要感谢二面的面试官，让我思考了很多事情。
+ 学校  科研与产业的目标不一致，从未让我向今天觉得可怕。西电计算机学院 ESI 排名很靠前，在学术圈里有着不错的声誉，老师数量多，论文成果自然也会多， 百家争鸣百花齐放，对于大学而言这再好不过了，尤其对于西电这所非985学校，在保持竞争力方面有着重要意义，毕竟成电是它最大的心结。但是， 硕士研究生身在圈内，前途却在圈外，尤其是学硕。今天正在做的工作，不太容易成为今后的铺垫，未来所需的职业素质，平时的学习工作中并不容易培养。
+学校的培养目标是研究型人才，而硕士毕业生更多的工作是实现某种设计。在最顶级的学术会议上，人们不会去在意工程细节，例如开发平台，系统架构。 而在企业，技术细节或许很容易决定成败。
+ 导师  导师的正确称呼应该是老板，所以自然而然不会在工作中支持员工努力寻找离职后的工作。我是众多廉价劳动力中的普通一个。导师通常分为两类，会coding的和有资源的。 我的导师是后者，他年轻的时候则是前者。因此我不会得到技术上的指导，一切依靠自学，难免跑偏。导师是希望学生找到好工作的，但恐怕这个希望只能靠我们自己顶着 压力自学成才了。
+ 个人  假如目前的研究项目能按照老板预期，研发完成，获得投资，并孵化成功成立公司，我觉得那再好不过了。老板尽管让人有诸多不乐意的地方，但务实求真我是认可的。 一方面科研与工作无缝对接，另一方面从一开始就参与或者带领核心技术研发。对于毕业找工作的正常路线，技术积累，不断学习是一个艰难的过程， 尽管实验室安排的工作确实可以提供软件开发的锻炼机会，但专注点却不在于研究所依赖的技术本身。因此很容易形成“只是会用现有的工具来实现某个系统”的知识水平， 尽管这个系统可能是重点科研成果。
+能够进入二面，在一定程度上证明了我具备一定的基础，但是还远远不够，我应该更深入了解技术，去问why。
+ 企业  基础设施研发是一件吃力不讨好的事情，比如在现有游戏引擎日渐成熟大行其道的环境下，就不太可能会有企业去从头开始研发游戏引擎，而是吃透已有的技术， 例如彻底研究虚幻4的开源代码，然后研发创新产品。为此它需要熟知这一领域的开发者进入企业，越熟悉越好。所以在校期间所从事的项目能与某家企业某个部门完全对口， 那就再好不过了，对个人和企业都节约了学习培养成本。
+总结 学校是否在考虑培养企业需要的人才呢，政策、指导思想什么的或许是的，但具体操作则是交给硕士研究生导师的，答案就值得思考了。
+接下来务必深入到技术中去，仔细阅读学习一些 C++ 项目源代码。
+  <a href='https://ethannote.github.io/diary/post/18-04-16/'>Read more →</a>
+</article> 
 
 
 
@@ -169,22 +191,6 @@ http://jsdraw2dx.jsfiction.com/
 
 
 
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="https://ethannote.github.io/diary/post/18-04-10/">18-04-10</a></h2>
-    <p class="blog-post-meta"><time datetime="2018-04-10T15:52:24&#43;08:00">Tue Apr 10, 2018</time> by EthanNote</p>
-  </header>
-  重新设计 传输 建立 TCP 客户端、服务器，数据内容为 Python dict, 通过 pickle 将 dict 序列化并发送，服务器端反序列化得到dict对象
-import socket import pickle class Reporter: def __init__(self, ip, port): self.sock=socket.socket() self.sock.connect((ip, port)) def report(self, data: dict): if type(data)!=dict: raise TypeError('require dict') self.sock.send(pickle.dumps(data))  接收 使用标准库自带的 ThreadingTCPServer, 并实现 BaseRequestHandler 的子类，即可完成服务器端数据接收。重写父类的 handle 方法。
-data = self.request.recv(1024) # load dict object from bytes obj = pickle.loads(data) if type(obj) == dict: # set time obj['time'] = datetime.datetime.now() # check auth info if 'auth' in obj.
-  <a href='https://ethannote.github.io/diary/post/18-04-10/'>Read more →</a>
-</article> 
-
-
-
-
-
 <nav class="blog-pagination">
   
   <a class="btn btn-outline-primary" href="/diary/categories/page/2/" rel="prev" role="button">Previous page</a>
@@ -213,6 +219,8 @@ data = self.request.recv(1024) # load dict object from bytes obj = pickle.loads(
     <ol class="list-unstyled">
 
 
+<li><a href="/diary/post/18-05-27/">18 05 27</a></li>
+
 <li><a href="/diary/post/18-05-26/">18 05 26</a></li>
 
 <li><a href="/diary/post/18-05-23/">18-05-23</a></li>
@@ -220,8 +228,6 @@ data = self.request.recv(1024) # load dict object from bytes obj = pickle.loads(
 <li><a href="/diary/post/18-05-22/">18-05-22</a></li>
 
 <li><a href="/diary/post/18-05-21/">18-05-21</a></li>
-
-<li><a href="/diary/post/18-05-20/">18-05-20</a></li>
 
     </ol>
   </section>
