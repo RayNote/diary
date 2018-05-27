@@ -12,7 +12,7 @@
 
 
 
-<meta property="og:updated_time" content="2018-04-09T10:15:09&#43;08:00"/>
+<meta property="og:updated_time" content="2018-04-09T10:19:35&#43;08:00"/>
 
 
 
@@ -40,7 +40,7 @@
     "@type": "Person",
     "name": "EthanNote"
   },
-  "dateModified": "2018-04-09T10:15:09&#43;08:00",
+  "dateModified": "2018-04-09T10:19:35&#43;08:00",
   "keywords": "",
   "description": "Let&#39;s remember how busy you were."
 }
@@ -103,6 +103,29 @@
 
 <article class="blog-post">
   <header>
+    <h2 class="blog-post-title"><a href="https://ethannote.github.io/diary/post/18-04-09/">18-04-09</a></h2>
+    <p class="blog-post-meta"><time datetime="2018-04-09T10:19:35&#43;08:00">Mon Apr 09, 2018</time> by EthanNote</p>
+  </header>
+  MongoDB 服务器搭建 安装 sudo apt install mongodb  同时安装 mongodb, mongodb-client, mongodb-server
+启动 sudo service mongodb start  配置 sudo vim /etc/mongodb.conf  其中默认ip为 127.0.0.1, 默认端口为 27017
+允许外部访问 bind_ip = 0.0.0.0 auth = true  合理的设计中数据库不应该直接暴露到外网，应该设计一个中间件。
+讲道理设置安全认证纯属心虚，有人想着攻击的时候怕是产品都卖出去一波了，然后让客户加钱解决安全问题
+用户设置 设置一个管理员和一个通用软件账户，管理员角色为 root, 软件账户角色为指定数据库的 readWrite
+命令行客户端
+mongo &lt;ip&gt;/&lt;db_name&gt; -u &lt;username&gt; -p  或者
+mongo &lt;ip&gt; use &lt;db_name&gt; db.auth(&lt;username&gt;, &lt;password&gt;)  Python 连接  安装数据库驱动
+pip install pymongo  连接并读写数据库
+  from pymongo import MongoClient client=MongoClient('mongodb://&lt;username&gt;:&lt;password&gt;') print(client.
+  <a href='https://ethannote.github.io/diary/post/18-04-09/'>Read more →</a>
+</article> 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
     <h2 class="blog-post-title"><a href="https://ethannote.github.io/diary/post/18-04-28/">18-04-28</a></h2>
     <p class="blog-post-meta"><time datetime="2018-04-09T10:15:09&#43;08:00">Mon Apr 09, 2018</time> by EthanNote</p>
   </header>
@@ -119,7 +142,7 @@
 <article class="blog-post">
   <header>
     <h2 class="blog-post-title"><a href="https://ethannote.github.io/diary/post/">Posts</a></h2>
-    <p class="blog-post-meta"><time datetime="2018-05-24T02:40:48&#43;08:00">Thu May 24, 2018</time> by EthanNote</p>
+    <p class="blog-post-meta"><time datetime="2018-05-27T23:19:22&#43;08:00">Sun May 27, 2018</time> by EthanNote</p>
   </header>
   
   <a href='https://ethannote.github.io/diary/post/'>Read more →</a>
@@ -157,6 +180,8 @@
     <ol class="list-unstyled">
 
 
+<li><a href="/diary/post/18-05-26/">18 05 26</a></li>
+
 <li><a href="/diary/post/18-05-23/">18-05-23</a></li>
 
 <li><a href="/diary/post/18-05-22/">18-05-22</a></li>
@@ -164,8 +189,6 @@
 <li><a href="/diary/post/18-05-21/">18-05-21</a></li>
 
 <li><a href="/diary/post/18-05-20/">18-05-20</a></li>
-
-<li><a href="/diary/post/18-05-19/">18-05-19</a></li>
 
     </ol>
   </section>
